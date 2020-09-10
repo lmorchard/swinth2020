@@ -13,7 +13,8 @@
     "watch": "npm-run-all --parallel watch:*",
     "watch:app": "onchange -v -i 'index.*' 'lib/**/*' -- npm-run-all build:app",
     "watch:vendor": "onchange -v -i 'wgl6100/**/*' 'sunvox/**/*' -- npm-run-all build:vendor",
-    "watch:node_modules": "onchange -v -i 'package.json' -- npm-run-all build:node_modules"
+    "watch:node_modules": "onchange -v -i 'package.json' -- npm-run-all build:node_modules",
+    "gh-pages": "gh-pages -d dist"
   },
   "dependencies": {
     "dat.gui": "^0.7.7",

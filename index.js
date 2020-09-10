@@ -2,7 +2,6 @@
 import WebGLDraw from "./wgl6100/index.js";
 import { initStats } from "./lib/drawStats.js";
 import { initGui, guiObjectFolder } from "./lib/debugGui.js";
-import { mapIndex } from "./wgl6100/utils.js";
 
 export const heroShapes = [
   [
@@ -76,14 +75,14 @@ class App {
           start: {
             x: rndRange(...this.bounds.x),
             y: rndRange(...this.bounds.y),
-            dx: rndRange(10, 400),
-            dy: rndRange(10, 400),
+            dx: rndRange(10, 150),
+            dy: rndRange(10, 150),
           },
           end: {
             x: rndRange(...this.bounds.x),
             y: rndRange(...this.bounds.y),
-            dx: rndRange(10, 400),
-            dy: rndRange(10, 400),
+            dx: rndRange(10, 150),
+            dy: rndRange(10, 150),
           },
         },  
       )
@@ -109,8 +108,8 @@ class App {
     };
 
     const gui = await initGui();
-    guiObjectFolder(gui, "drawProps", drawProps, [], true);
-    guiObjectFolder(gui, "drawProps.scene", layerDrawProps.scene, [], true);
+    guiObjectFolder(gui, "drawProps", drawProps, [], false);
+    guiObjectFolder(gui, "drawProps.scene", layerDrawProps.scene, [], false);
 
     Object.assign(this, {
       drawStats: this.debug && (await initStats()),
