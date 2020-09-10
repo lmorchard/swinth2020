@@ -63,6 +63,7 @@ class App {
     };
 
     this.lines = [];
+    
     for (let idx = 0; idx < 3; idx++) {
       this.lines.push(
         {
