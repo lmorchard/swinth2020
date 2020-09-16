@@ -101,8 +101,8 @@ class App {
         cameraX: 0.0,
         cameraY: 0.0,
         lineWidth: 1.0,
-        bloomStrength: 0.1,
-        bloomRadius: 0.2,
+        bloomStrength: 0.3,
+        bloomRadius: 1.5,
         jitter: 0.0,
       },
       backdrop: {},
@@ -201,7 +201,8 @@ class App {
   async loadMusic() {
     await this.loadSunvoxLib();
     const musicResp = await fetch(
-      "sunvox/js/music/NightRadio - machine 0004.sunvox"
+      // "sunvox/js/music/NightRadio - machine 0004.sunvox"
+      "./music/swinth2020-stationary-ark-1.sunvox"
     );
     const musicArrayBuffer = await musicResp.arrayBuffer();
     const musicData = new Uint8Array(musicArrayBuffer);
