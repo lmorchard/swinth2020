@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel serve-dev watch",
     "build": "npm-run-all build:*",
-    "build:app": "mkdir -p dist && cp -r index.* lib dist/",
+    "build:app": "mkdir -p dist && cp -r index.* lib music dist/",
     "build:vendor": "mkdir -p dist && cp -r wgl6100 sunvox dist/",
     "build:node_modules": "mkdir -p dist/node_modules && cp package.json dist/package.json && cd dist && npm install --only=production",
     "serve-dev": "reload dist",
